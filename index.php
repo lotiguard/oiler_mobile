@@ -82,34 +82,35 @@
             <section class="common-section testimonials" ng-controller="TestimonialsController as testimonialsCtrl">
                 <h1>Отзывы клиентов</h1>
                 <ul>
-                    <li class="testimonial" ng-repeat="testimonial in testimonialsCtrl.testimonials | limitTo: testimonialsCtrl.quantity">
-                     <div class="img">
-                        <img ng-src="{{testimonial.img}}" height="35" width="35" alt="">
-                    </div>
-                    <div class="content">
-                        <div class="person">{{testimonial.name}}
-                            <span class="date">{{testimonial.date}}</span>
+                    <li class="testimonial" ng-repeat="testimonial in testimonialsCtrl.testimonials | limitTo: testimonialsCtrl.quantity" >
+                        <div class="img">
+                            <img ng-src="{{testimonial.img}}" height="35" width="35" alt="">
                         </div>
-                        <!-- todo -->
-                        <div class="stars">{{testimonialsCtrl.createStars( testimonial.stars )}}</div>
-                        <div class="text">
-                            <span>{{testimonial.text | limitTo: testimonial.limit }}{{ testimonialsCtrl.makeDots($index) }}</span>
-                            <i class="fa fa-chevron-down " ng-click="testimonialsCtrl.toggleLimit($index)" ng-show="testimonialsCtrl.checkLength($index)"></i>
+                        <div class="content">
+                            <div class="person">{{testimonial.name}}
+                                <span class="date">{{testimonial.date}}</span>
+                            </div>
+                            <!-- todo -->
+                            <div class="stars" ng-bind-html="testimonial.stars"></div>
+
+                            <div class="text">
+                                <span>{{testimonial.text | limitTo: testimonial.limit }}{{ testimonialsCtrl.makeDots($index) }}</span>
+                                <i class="fa fa-chevron-down " ng-click="testimonialsCtrl.toggleLimit($index)" ng-show="testimonialsCtrl.checkLength($index)"></i>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <button class="showMore" ng-click="testimonialsCtrl.changeQuantity()">{{testimonialsCtrl.moreQuantityText}}</button>
-            </ul>
-        </section>
+                    </li>
+                    <button class="showMore" ng-click="testimonialsCtrl.changeQuantity()">{{testimonialsCtrl.moreQuantityText}}</button>
+                </ul>
+            </section>
+        </div>
     </div>
-</div>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="libs/angular.min.js"></script>
-
-<script src="js/app/app.js"></script>
-<script src="libs/jquery.mask.js"></script>
-<script src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="libs/angular.min.js"></script>
+    <script src="js/angular-sanitize.min.js"></script>
+    <script src="js/app/app.js"></script>
+    <script src="libs/jquery.mask.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

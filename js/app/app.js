@@ -1,6 +1,6 @@
 (function(){
 
-	angular.module('mobileApp', [])
+	angular.module('mobileApp', ['ngSanitize'])
 		.controller('BannerController', function(){
 			this.items = bannerItems;
 			this.info = bannerInfo;
@@ -53,12 +53,22 @@
 				} else {
 					this.quantity += 1;
 				}
+
+
+
+					// console.log("this quantity is:" + this.quantity);
+				 //   makeSSS();
 			};
 
-			this.createStars = function(number_of_stars){
-				var star = angular.element('<i class="fa fa-star"></i>');
-				angular.element('.testimonials').find('.stars').append(star);
+			this.createStars = function(index, number_of_stars){
+				var starElement = angular.element('<i class="fa fa-star"></i>');
+				var star = angular.element('.testimonials').find('.stars').eq(index);
+
+				console.log(star);
+				
 			};
+
+
 		})
 		// .filter('myFilter', function($filter){
 		// 	return function(input, limit){
@@ -67,6 +77,27 @@
 		// 	};
 		// });
 
+
+// function makeSSS(){
+// 	var a = angular.element('.testimonials').find('.stars');
+
+// 	console.log("But stars are:" + a.length);
+
+
+// 	angular.forEach(a, function(value, key){
+// 		var starsAmount = angular.element(value).html();
+// 		console.log("---------Start---------");
+// 			console.log(starsAmount);
+// 		console.log("---------End---------");
+// 	});
+
+	
+// }
+
+
+// angular.element(document).ready(function(){
+// 	makeSSS();
+// });
 
 
 // BannerController data
@@ -99,16 +130,16 @@
 		{
 			"name": "Максим Волков",
 			"img": "img/person_01.jpg",
-			"stars": "5",
+			"stars": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i></i><i class='fa fa-star grey-star'></i>",
 			"date": "12.09",
-			"text": "Сегодня был на замене передних колодок тормозов. До этого перезвонил на СТО и объя трения металл об металл)",
+			"text": "Сегодня был на замене передних колодок тормозов. До этого перезвонил на СТО и объя трения металл об мета)",
 			"isClose": "false",
 			"limit": "74"
 		},
 		{
 			"name": "Сергей Исаев",
 			"img": "img/person_02.jpg",
-			"stars": "4",
+			"stars": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i></i><i class='fa fa-star '></i>",
 			"date": "12.09",
 			"text": "Одним словом молодцы! Приехал (точнее притянул друга) на СТО за пол часа до закрытия в воскресенье, предварительно перезвонив менеджеру",
 			"isClose": "false",
@@ -117,34 +148,34 @@
 		{
 			"name": "Генадий Наумов",
 			"img": "img/person_03.jpg",
-			"stars": "5",
+			"stars": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i></i><i class='fa fa-star grey-star'></i>",
 			"date": "12.09",
 			"text": "Одним словом молодцы!",
 			"isClose": "false",
 			"limit": "74"
 		},
 		{
-			"name": "Максим Волков",
-			"img": "img/person_01.jpg",
-			"stars": "4",
+			"name": "Антон Давыдов",
+			"img": "img/person_04.jpg",
+			"stars": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i></i><i class='fa fa-star '></i>",
 			"date": "12.09",
 			"text": "Сегодня был на замене передних колодок тормозов. До этого перезвонил на СТО и объя трения металл об металл)",
 			"isClose": "false",
 			"limit": "74"
 		},
 		{
-			"name": "Сергей Исаев",
-			"img": "img/person_02.jpg",
-			"stars": "4",
+			"name": "Никита Каменев",
+			"img": "img/person_05.jpg",
+			"stars": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i></i><i class='fa fa-star grey-star'></i>",
 			"date": "12.09",
 			"text": "Одним словом молодцы! Приехал (точнее притянул друга) на СТО за пол часа до закрытия в воскресенье, предварительно перезвонив менеджеру",
 			"isClose": "false",
 			"limit": "74"
 		},
 		{
-			"name": "Генадий Наумов",
-			"img": "img/person_03.jpg",
-			"stars": "5",
+			"name": "Петр Шмелев",
+			"img": "img/person_06.jpg",
+			"stars": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i></i><i class='fa fa-star '></i>",
 			"date": "12.09",
 			"text": "Одним словом молодцы!",
 			"isClose": "false",
