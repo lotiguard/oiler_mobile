@@ -1,0 +1,43 @@
+body {
+  color: #9a9a9a; }
+
+#sandwich {
+  background-color: #f2f2f2; }
+
+#top-contacts {
+  color: #333333; }
+
+#top {
+  background-color: #fff; }
+
+.burgx,
+.burgx2,
+.burgx3 {
+  background-color: #9a9a9a; }
+
+#site-menu {
+  background-color: #f2f2f2; }
+
+.price b {
+  color: #ffcb08; }
+
+.sign-in form {
+  color: #333333; }
+  .sign-in form .submit-btn {
+    background-color: #ffcb08; }
+
+.allertMessage .fa.fa-times {
+  color: #9a9a9a; }
+
+.common-section h1,
+.common-section p {
+  color: #333333; }
+.common-section li .round {
+  color: #a0ca4c;
+  border: 1px solid #a0ca4c; }
+.common-section .testimonial .person {
+  color: #333333; }
+  .common-section .testimonial .person .date {
+    color: #cccccc; }
+
+/*# sourceMappingURL=colors.css.map */

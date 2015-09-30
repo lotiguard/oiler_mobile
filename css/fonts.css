@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-regular-webfont.woff2") format("woff2"), url("../fonts/opensans-regular-webfont.woff") format("woff"); }
+@font-face {
+  font-family: "OpenSansBold";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-bold-webfont.woff2") format("woff2"), url("../fonts/opensans-bold-webfont.woff") format("woff"); }
+body {
+  font-family: "OpenSans", sans-serif; }
+
+/*# sourceMappingURL=fonts.css.map */

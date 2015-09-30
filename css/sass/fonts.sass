@@ -1,0 +1,10 @@
+@import "bourbon/bourbon"
+
+@include font-face("OpenSans", "../fonts/opensans-regular-webfont", normal, $file-formats: eot woff2 woff)
+@include font-face("OpenSansBold", "../fonts/opensans-bold-webfont", bold, $file-formats: eot woff2 woff)
+
+$font-stack: 'OpenSans', sans-serif
+
+
+body
+ font-family: $font-stack
